@@ -1,0 +1,11 @@
+.Catalog {
+    position: absolute;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    height: 900px;
+    width: 100%;
+}
+
+.Container {
+    position: relative;
+}

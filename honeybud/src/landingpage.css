@@ -1,0 +1,10 @@
+.frontpage {
+    display: flex;
+    flex-direction: column; /* Stack components vertically */
+    align-items: center; /* Horizontally center align */
+    padding: 20px; /* Add padding for spacing */
+  }
+
+.Strips {
+    align-items: center;
+}

@@ -1,0 +1,12 @@
+.Banner {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Horizontally center align */
+    padding: 20px; /* Add padding for spacing */
+  }  
+
+  .BannerImg {
+    max-width: 60%; /* Set a maximum width */
+    max-height: 60%; /* Set a maximum height */
+    width: auto; /* Allow the image to scale with its parent's width */
+  }

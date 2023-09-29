@@ -1,0 +1,11 @@
+.strip {
+    width: 100vw;
+    height: 40px;
+    background-color: var(--secondary-color);
+    transform: rotate(8deg);
+    margin-top: 40px;
+  }
+  
+  .strip:first-child {
+    margin-top: 0;
+  }
