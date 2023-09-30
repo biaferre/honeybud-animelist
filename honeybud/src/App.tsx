@@ -8,17 +8,24 @@ import {Header} from './components/header/Header'
 import {Banner} from './components/banner/Banner'
 import {Strip} from './components/strip/Strip'
 import {Catalog} from './components/catalog/Catalog'
+import {Credits} from './components/credits/Credits'
+
 
 function App() {
   return (
     <div className="FrontPage">
-      <Header />
-      <Banner />
-      <div className= "LargeStrips">
-        <Strip />
-        <Strip />
+      <div className= "FixedHeader">
+        <Header />
       </div>
-      <Catalog />
+      <div className ="ScrollableArea">
+        <Banner />
+        <div className= "LargeStrips">
+          <Strip />
+          <Strip />
+        </div>
+        <Catalog />
+        <Credits />
+      </div>
     </div>
   );
 }

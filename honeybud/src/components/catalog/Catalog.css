@@ -2,6 +2,7 @@
     position: absolute;
     background: url('../../assets/images/trapeze.png') no-repeat center center;
     background-size: contain;
+    background-position-y:bottom;
     color: var(--primary-color);
     height: 900px;
     width: 98.9vw;
@@ -11,6 +12,7 @@
     align-items: center;
     flex-direction: column; 
     gap: 10px; 
+    text-align: center;
 
     font-family: "Reem Kufi", sans-serif;
     font-size: 28px;

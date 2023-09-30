@@ -3,11 +3,11 @@
     height: 30%;
     border-radius: 48px;
     box-shadow: 0px 3.27px 16px 2px rgba(0, 0, 0, 0.1);
-    position: absolute; 
-    top: 48;
-    bottom: 100; /* Position from the left of the parent */
-    margin: 10px; /* Add some margin for spacing */
-    z-index: 1; /* Set a higher z-index to place it on top */
+    position: relative; 
+    top: 18px;
+    bottom: 100; 
+    margin: 10px;
+    z-index: 1;
 }
 
 .ImgDisplay:nth-child(1) {
@@ -15,6 +15,7 @@
   }
 
 .ImgDisplay:nth-child(2) {
+    top: -2px;
     z-index: 2; 
   }
 
