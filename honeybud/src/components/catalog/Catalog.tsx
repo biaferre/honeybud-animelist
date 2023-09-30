@@ -1,14 +1,15 @@
 import './Catalog.css'
+import { CatalogImageCollection } from './CatalogImageCollection'
 
-import {SquareLiner} from './SquareLiner'
 
 export const Catalog = () => {
     return (
-        <div className = "Container">
             <div className= "Catalog">
-                <p>OII</p>
+                <p><b>THE CLASSIC, THE TRENDY AND THE CULT.</b></p>
+                <div className = "CatalogImgs">
+                    <CatalogImageCollection />
+                </div>
+                <p>we don't discriminate. log all of your anime from<br />over 100000 production companies.</p>
             </div>
-            <SquareLiner />
-        </div>
     )
 }

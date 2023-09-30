@@ -1,8 +1,0 @@
-.Squareliner {
-    position: absolute;
-    top: 100px;
-    background-color: var(--primary-color);
-    height: 400;
-    width: 100%;
-    transform: rotate(10deg)
-}

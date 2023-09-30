@@ -9,7 +9,7 @@ const Tab: React.FC<TabInfo> = ({name}) => {
 };
 
 export const Menu = () => {
-    const tabs = ['home', 'catalog', 'features', 'about'];
+    const tabs = ['home', 'catalog',  'about'];
 
     return (
         <div className = "MenuBar">

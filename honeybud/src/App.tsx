@@ -14,7 +14,7 @@ function App() {
     <div className="FrontPage">
       <Header />
       <Banner />
-      <div className= "Strips">
+      <div className= "LargeStrips">
         <Strip />
         <Strip />
       </div>

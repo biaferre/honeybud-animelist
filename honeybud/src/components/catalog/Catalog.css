@@ -1,11 +1,17 @@
 .Catalog {
     position: absolute;
-    background-color: var(--secondary-color);
+    background: url('../../assets/images/trapeze.png') no-repeat center center;
+    background-size: contain;
     color: var(--primary-color);
     height: 900px;
-    width: 100%;
-}
+    width: 98.9vw;
 
-.Container {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    gap: 10px; 
+
+    font-family: "Reem Kufi", sans-serif;
+    font-size: 28px;
 }
