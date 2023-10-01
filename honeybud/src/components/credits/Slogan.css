@@ -1,0 +1,14 @@
+.SloganBar {
+    display: flex;
+    color: var(--accent-color);
+    justify-content: space-around;
+    flex-direction: column;
+    width: 33vw;
+    text-align: right;
+    font-size: 1vw;
+}
+
+.TagCredit {
+    font-size: 0.7vw;
+
+}

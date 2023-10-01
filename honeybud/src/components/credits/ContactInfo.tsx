@@ -1,11 +1,12 @@
 import './ContactInfo.css'
-export const ContactInfo = () => {
+import emailicon from '../../assets/images/emailicon.png';
 
+export const ContactInfo = () => {
     return (
         <div className = "ContactInfoBar">
-            <p>talk to us!</p>
+            <h1>talk to us!</h1>
             <div className = "EmailInfo">
-                <img src= "" alt = "email-icon" />
+                <img src={emailicon} alt = "email-icon" className= "EmailIcon"/>
                 <p>contact-us@honeybud.com</p>
             </div>
             <div className="InstaInfo">

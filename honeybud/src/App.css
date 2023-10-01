@@ -13,11 +13,6 @@
   }
 }
 
-.ScrollableArea {
-  padding-top: 80px;
-  overflow: auto;
-}
-
 .FixedHeader {
   position: fixed;
   top: 20;
@@ -25,8 +20,15 @@
   display: flex;
   align-items: center;
   background-color: #282c34;
-  z-index: 999; /* Adjust the z-index to a higher value */
+  z-index: 999;
 }
+
+.EndofPage {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
 
 
 .App-header {

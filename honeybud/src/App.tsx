@@ -17,16 +17,16 @@ function App() {
       <div className= "FixedHeader">
         <Header />
       </div>
-      <div className ="ScrollableArea">
         <Banner />
         <div className= "LargeStrips">
           <Strip />
           <Strip />
         </div>
-        <Catalog />
-        <Credits />
+        <div className= "EndofPage">
+          <Catalog />
+          <Credits />
+        </div>
       </div>
-    </div>
   );
 }
 

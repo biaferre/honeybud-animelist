@@ -5,7 +5,7 @@ import { CatalogImageCollection } from './CatalogImageCollection'
 export const Catalog = () => {
     return (
             <div className= "Catalog">
-                <p><b>THE CLASSIC, THE TRENDY AND THE CULT.</b></p>
+                <h1><b>THE CLASSIC, THE TRENDY AND THE CULT.</b></h1>
                 <div>
                     <CatalogImageCollection />
                 </div>

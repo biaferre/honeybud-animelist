@@ -1,8 +1,35 @@
-.ContactInfo {
+.ContactInfoBar {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: left;
     flex-direction: column; 
-    gap: 10px; 
+    justify-content: space-evenly;
     text-align:left ;
+
+    color: var(--accent-color);
+    width: 33vw;
+
+}
+
+.ContactInfoBar h1 {
+    font-size: 0.9vw;
+    font-style: bold;
+
+}
+
+.EmailInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: row; 
+    gap: 4px;
+    
+    font-size: 0.8vw;
+}
+
+.EmailIcon {
+    height: 5%;
+    width: 5%;
+}
+
+.InstaInfo {
+    font-size: 0.8vw;
 }

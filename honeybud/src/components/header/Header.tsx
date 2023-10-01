@@ -10,7 +10,7 @@ export const Header = () => {
           <Menu />
         </div>
         <div className="LogoImg">
-          <img src={honeybud} alt="Honeybud Logo" style={{objectFit: 'cover'}} className= "LogoImg" />
+          <img src={honeybud} alt="Honeybud Logo" className= "LogoImg" />
         </div>
       </div>
     </div>
