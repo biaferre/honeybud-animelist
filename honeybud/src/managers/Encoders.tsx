@@ -1,10 +1,11 @@
 export const base64UrlEncode = (text: string): string => {
-    let base64 = Buffer.from(text).toString('base64');
-    base64 = base64.replace(/=/g, '');
-    base64 = base64.replace(/\+/g, '-');
-    base64 = base64.replace(/\//g, '_');
-    return base64;
-  };
+  let base64 = btoa(text);
+  base64 = base64.replace(/=/g, '');
+  base64 = base64.replace(/\+/g, '-');
+  base64 = base64.replace(/\//g, '_');
+  return base64;
+};
+
   
   export const sha256 = async (message: string): Promise<ArrayBuffer> => {
     const encoder = new TextEncoder();
