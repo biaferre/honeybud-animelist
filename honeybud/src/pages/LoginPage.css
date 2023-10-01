@@ -1,3 +1,28 @@
 .LoginPage {
     background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-family: "Reem Kufi", sans-serif;
+
+    display: flex;
+    gap: 4vh;
+    flex-direction: column; 
+    align-items: center;
+    text-align: left;
+    padding-top: 5%;
+}
+
+.HeaderImg {
+    width: 30vw;
+    height: 20vh;
+    background-image: url(../assets/images/honeybud-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.LoginInfo {
+    gap: 2vh;
+}
+
+.LoginInfo h1 {
+    font-size: 1.5vw;
 }
