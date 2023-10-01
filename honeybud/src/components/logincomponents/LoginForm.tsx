@@ -1,5 +1,5 @@
 import React from 'react';
-import { authenticateWithMyAnimeList } from '../../managers/AuthQuery';
+import { authenticateWithMyAnimeList } from '../../managers/auth/auth-flow';
 import { Button } from '../button/Button';
 import './LoginForm.css';
 
@@ -13,7 +13,7 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleLogin}> {/* Attach handleLogin to form submission */}
+    <form onSubmit={handleLogin}>
       <div className="LoginForm">
         <div className="LabelnField">
           <p>Username:</p>
@@ -32,8 +32,8 @@ const LoginForm: React.FC = () => {
           />
         </div>
       </div>
-      <div className="LoginButton">
-        <Button label="LOG IN" />
+      <div className="LoginButton" onClick={handleLogin}>
+        <Button label="LOG IN"  />
       </div>
     </form>
   );
