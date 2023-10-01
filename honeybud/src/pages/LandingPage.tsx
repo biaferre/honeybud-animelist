@@ -1,20 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
 import '../assets/font/ReemKufi-Regular.ttf';
 import '../assets/font/ReemKufi-Medium.ttf';
 import '../assets/font/ReemKufi-Bold.ttf';
-import {Header} from '../components/header/Header'
-import {Banner} from '../components/banner/Banner'
-import {Strip} from '../components/strip/Strip'
-import {Catalog} from '../components/catalog/Catalog'
-import {Credits} from '../components/credits/Credits'
+import './LandingPage.css'
+import {Menu} from '../components/menu/Menu';
+import {Button} from '../components/button/Button';
+import {Banner} from '../components/banner/Banner';
+import {Strip} from '../components/strip/Strip';
+import {Catalog} from '../components/catalog/Catalog';
+import {Credits} from '../components/credits/Credits';
+import { Link } from "react-router-dom";
 
-
-function LandingPage() {
+export const LandingPage = () => {
   return (
+
     <div className="FrontPage">
       <div className= "FixedHeader">
-        <Header />
+        <Menu />
+        <Link to={'/login'}>
+          <Button label={"JOIN NOW"}/>
+        </Link>
       </div>
         <Banner />
         <div className= "LargeStrips">
@@ -26,7 +30,6 @@ function LandingPage() {
           <Credits />
         </div>
       </div>
+
   );
 }
-
-export default LandingPage;

@@ -1,0 +1,12 @@
+.FixedHeader {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  padding-left: 10vw;
+
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  position: fixed;
+  width: 100vw; 
+  margin-bottom: 2vh;
+}
