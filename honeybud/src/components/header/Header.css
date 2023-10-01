@@ -5,10 +5,11 @@
   padding-top: 10vh;
   padding-left: 10vw;
 
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: var(--primary-color);
   position: fixed;
-  width: 100%; 
+  width: 100vw; 
+  margin-bottom: 2vh;
 }
 
 .centeredContent {
@@ -17,13 +18,4 @@
   align-items: center;
   width: 100%;
   justify-content: space-between;
-}
-
-.LogoImg {
-  padding-left: 40px;
-  width: '15%';
-  height: '15%';
-  max-width: 35%; /* Set a maximum width */
-  max-height: 35%; /* Set a maximum height */
-  width: auto; /* Allow the image to scale with its parent's width */
 }

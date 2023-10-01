@@ -1,6 +1,6 @@
 import { Menu } from '../menu/Menu';
 import './Header.css';
-import honeybud from '../../assets/images/honeybud-icon.png';
+import { Button } from '../button/Button';
 
 export const Header = () => {
   return (
@@ -9,9 +9,7 @@ export const Header = () => {
         <div className="MenuBar">
           <Menu />
         </div>
-        <div className="LogoImg">
-          <img src={honeybud} alt="Honeybud Logo" className= "LogoImg" />
-        </div>
+          <Button label={'JOIN NOW'} />
       </div>
     </div>
   );
