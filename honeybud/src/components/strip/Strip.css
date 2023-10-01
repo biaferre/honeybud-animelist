@@ -4,6 +4,8 @@
     background-color: var(--secondary-color);
     transform: rotate(8deg);
     margin-top: 5vh;
+    align-content: left;
+    overflow: hidden;
   }
   
   .strip:first-child {

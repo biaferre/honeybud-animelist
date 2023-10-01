@@ -21,4 +21,6 @@
     stroke-width: 2px;
     border-radius: 27.982px;
     color: var(--accent-color);
+    font-size: 1.2vw;
+    padding-left: 1vw;
 }
