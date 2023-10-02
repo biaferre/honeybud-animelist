@@ -1,6 +1,7 @@
 .CollectionList {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 20vw;
   }
   
   .CollectionItem {

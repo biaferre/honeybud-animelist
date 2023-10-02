@@ -1,5 +1,6 @@
 import honeybudicon from '../../assets/images/honeybud-icon.png'
 import './Home.css'
+import {CollectionMiddleware} from '../../components/collections/CollectionMiddleware'
 import { Link } from "react-router-dom";
 
 export const Home = () => {
@@ -16,9 +17,7 @@ export const Home = () => {
             <div className="CollectionLabel">
                 <h1>Anime of the season</h1>
             </div>
-            <div className="Collection">
-
-            </div>
+            <CollectionMiddleware />
         </div>
         </div>
       </div>

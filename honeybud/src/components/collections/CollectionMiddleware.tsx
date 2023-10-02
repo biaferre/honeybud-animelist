@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { getSeasonalAnime } from '../../services/collectionService';  // Adjust the import path
 import Collection from './Collection';  // Adjust the import path
-import './YourComponent.css';  // Adjust the CSS file path
 import { Anime } from '../../interfaces/Interfaces';  // Adjust the import path
 
 interface CollectionMiddlewareProps {}
 
-const CollectionMiddleware: React.FC<CollectionMiddlewareProps> = () => {
+export const CollectionMiddleware: React.FC<CollectionMiddlewareProps> = () => {
   const [animeData, setAnimeData] = useState<Anime[]>([]);
 
   useEffect(() => {
@@ -26,11 +25,9 @@ const CollectionMiddleware: React.FC<CollectionMiddlewareProps> = () => {
   };
 
   return (
-    <div>
-      <h1>Seasonal Anime Collection</h1>
+    <div className='CollectionList'>
       <Collection data={animeData} />
     </div>
   );
 };
 
-export default CollectionMiddleware;

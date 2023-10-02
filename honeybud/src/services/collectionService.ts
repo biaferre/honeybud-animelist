@@ -1,6 +1,5 @@
 import { Anime } from '../interfaces/Interfaces';
-
-const axios = require('axios');
+import axios from 'axios'; 
 
 export const getSeasonalAnime = async (year: number, season: string): Promise<Anime[]> => {
   const url = `https://api.myanimelist.net/v2/anime/season/${year}/${season}`;

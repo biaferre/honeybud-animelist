@@ -6,7 +6,7 @@ interface CollectionProps {
   data: Anime[];
 }
 
-const Collection: React.FC<CollectionProps> = ({ data }) => {
+export const Collection: React.FC<CollectionProps> = ({ data }) => {
     
   return (
     <div className="CollectionList">
