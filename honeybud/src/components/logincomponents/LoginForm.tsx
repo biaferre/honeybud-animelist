@@ -1,16 +1,21 @@
 import React from 'react';
-import { authenticateWithMyAnimeList } from '../../managers/auth/auth-flow';
-import { Button } from '../button/Button';
+import { requestOAuthAuthentication } from '../../services/authService';
+import { generateCodeVerifier } from '../../utilities/codeVerifier'
+import { LoginButton } from './LoginButton';
 import './LoginForm.css';
 
 const LoginForm: React.FC = () => {
+  //console.log('File is loaded');
+
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
   const handleLogin = (event: React.FormEvent) => {
-    event.preventDefault(); // Prevent default form submission
-    authenticateWithMyAnimeList(username, password);
+    event.preventDefault(); // prevent the form from submitting in the default way
+    const codeVerifier = generateCodeVerifier();
+    requestOAuthAuthentication(codeVerifier);
   };
+  
 
   return (
     <form onSubmit={handleLogin}>
@@ -32,8 +37,8 @@ const LoginForm: React.FC = () => {
           />
         </div>
       </div>
-      <div className="LoginButton" onClick={handleLogin}>
-        <Button label="LOG IN"  />
+      <div className="LoginButton">
+        <LoginButton label="LOG IN" type="submit" />
       </div>
     </form>
   );

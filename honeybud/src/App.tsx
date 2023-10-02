@@ -6,6 +6,7 @@ import './assets/font/ReemKufi-Bold.ttf';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { LandingPage } from "./pages/LandingPage";
 import { LoginPage } from "./pages/LoginPage";
+import { Home} from "./pages/Home";
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage/>} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/oauth-callback" element={<OAuthCallbackComponent/>} />
+        <Route path="/callback" element={<Home/>} />
       </Routes>
     </BrowserRouter>
   );
