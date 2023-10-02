@@ -4,7 +4,7 @@ const MYANIMELIST_TOKEN_ENDPOINT = 'https://myanimelist.net/v1/oauth2/token';
 
 const refreshAccessToken = async (refreshToken: string) => {
   try {
-    const clientCredentials = 'YOUR_CLIENT_ID:YOUR_CLIENT_SECRET';
+    const clientCredentials = '41d19d7ac40dc14ab23df95f93b92134:5b03b659a3ca4e3ecd99389640d63a94b698447d75d79e03fc3d77e7cf055738';
     const basicAuthHeader = `Basic ${Buffer.from(clientCredentials).toString('base64')}`;
 
     const response = await axios.post(

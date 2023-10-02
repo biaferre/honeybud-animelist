@@ -1,0 +1,14 @@
+.CollectionList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .CollectionItem {
+    margin: 10px;
+  }
+  
+  .CollectionItem img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+  }
+  

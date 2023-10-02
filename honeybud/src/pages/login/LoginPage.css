@@ -14,7 +14,7 @@
 .HeaderImg {
     width: 30vw;
     height: 20vh;
-    background-image: url(../assets/images/honeybud-icon.png);
+    background-image: url(../../assets/images/honeybud-icon.png);
     background-repeat: no-repeat;
     background-size: contain;
 }

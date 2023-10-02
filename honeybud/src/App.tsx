@@ -4,9 +4,9 @@ import './assets/font/ReemKufi-Regular.ttf';
 import './assets/font/ReemKufi-Medium.ttf';
 import './assets/font/ReemKufi-Bold.ttf';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import { LandingPage } from "./pages/LandingPage";
-import { LoginPage } from "./pages/LoginPage";
-import { Home} from "./pages/Home";
+import { LandingPage } from "./pages/landing/LandingPage";
+import { LoginPage } from "./pages/login/LoginPage";
+import { Home} from "./pages/home/Home";
 
 
 function App() {
@@ -23,14 +23,3 @@ function App() {
 
 
 export default App;
-
-function OAuthCallbackComponent() {
-    useEffect(() => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const code= urlParams.get('code');
-        if (code) {
-            localStorage.setItem('authorization_code', code);
-        }
-    }, []);
-    return <div>Authenticating...</div>
-}

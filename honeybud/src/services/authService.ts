@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { generateCodeVerifier } from '../utilities/codeVerifier';
 
 const clientId = '41d19d7ac40dc14ab23df95f93b92134';
 const clientSecret = '5b03b659a3ca4e3ecd99389640d63a94b698447d75d79e03fc3d77e7cf055738';
@@ -28,11 +27,11 @@ export const exchangeAuthorizationCode = async (code: string, codeVerifier: stri
         grant_type: 'authorization_code',
         code: code,
         redirect_uri: redirectUri,
-        code_verifier: generateCodeVerifier(),
+        code_verifier: codeVerifier,
       });
-      console.log('Response received:', response.data); // Log the response data
+      console.log('Response received:', response.data); 
 
-      return response.data; // This will contain access_token and refresh_token
+      return response.data; 
     } catch (error: any) {
         if (error.response) {
           console.error('Error Response', error.response.data);

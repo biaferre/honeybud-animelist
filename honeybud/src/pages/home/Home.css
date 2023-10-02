@@ -1,0 +1,16 @@
+.PageContent {
+    font-family: "Reem Kufi", sans-serif;
+    color: var(--accent-color);
+}
+
+.SeasonalAnime h1 {
+    font-size: 1.4vw;
+}
+
+.Header img  {
+    display: flex;
+    align-items: left;
+    margin-left: 5vw;
+    width: 20%;
+    height: 20%;
+}
