@@ -17,10 +17,10 @@ export const requestOAuthAuthentication = (codeVerifier: string) => {
     window.location.href = oauthUrl.toString();
     
 };
+
   
 export const exchangeAuthorizationCode = async (code: string, codeVerifier: string) => {
   try {
-    // Constructing the x-www-form-urlencoded data
     const data = new URLSearchParams();
     data.append('client_id', clientId);
     data.append('client_secret', clientSecret);
@@ -28,7 +28,7 @@ export const exchangeAuthorizationCode = async (code: string, codeVerifier: stri
     data.append('redirect_uri', redirectUri);
     data.append('code_verifier', codeVerifier);
 
-    // Send a POST request
+
     const response = await axios.post('http://localhost:3002/exchangeToken', data, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -41,6 +41,3 @@ export const exchangeAuthorizationCode = async (code: string, codeVerifier: stri
     throw error;
   }
 };
-
-
-

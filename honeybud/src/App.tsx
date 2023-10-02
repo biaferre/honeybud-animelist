@@ -17,7 +17,6 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/callback" element={<OAuthRedirectHandler />} />
         <Route path="/home" element={<Home />} />
-
       </Routes>
     </BrowserRouter>
   );

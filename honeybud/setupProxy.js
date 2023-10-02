@@ -17,6 +17,34 @@ const corsOptions = {
   
 app.use(express.json());
 
+app.get('/authorize', async (req, res) => {
+    try {
+      const requestData = {
+        response_type: 'code',
+        client_id: '41d19d7ac40dc14ab23df95f93b92134',
+        code_challenge: sessionStorage.getItem('codeVerifier'),
+        code_challenge_method: 'plain'
+      };
+  
+      const url = `https://myanimelist.net/v1/oauth2/authorize?${qs.stringify(requestData)}`;
+  
+      res.json({ authorization_url: url });
+    } catch (error) {
+      res.status(500).json('Server error');
+    }
+  });
+
+ app.get('/callback', (req, res) => {
+    const authorizationCode = req.query.code;
+    const state = req.query.state;
+    
+    sessionStorage.setItem('authorization_code', authorizationCode)
+    sessionStorage.setItem('state', state)
+
+    res.send('Callback received');
+  });
+  
+
 app.post('/exchangeToken', async (req, res) => {
   try {
     const auth = 'Basic ' + Buffer.from(req.body.client_id + ':' + req.body.client_secret).toString('base64');
