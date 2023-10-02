@@ -23,13 +23,13 @@ export const exchangeAuthorizationCode = async (code: string, codeVerifier: stri
   try {
     const data = new URLSearchParams();
     data.append('client_id', clientId);
-    data.append('client_secret', clientSecret);
-    data.append('code', code);
+    data.append('client_secret', clientSecret);  // Add this line
+    data.append('grant_type', 'authorization_code');
+    data.append('code', code); // Use the passed code directly, not from sessionStorage
     data.append('redirect_uri', redirectUri);
     data.append('code_verifier', codeVerifier);
 
-
-    const response = await axios.post('http://localhost:3002/exchangeToken', data, {
+    const response = await axios.post('http://localhost:3002/callback', data, {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
