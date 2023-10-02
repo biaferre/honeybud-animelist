@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const clientId = '41d19d7ac40dc14ab23df95f93b92134';
+export const clientId = '41d19d7ac40dc14ab23df95f93b92134';
 const clientSecret = '5b03b659a3ca4e3ecd99389640d63a94b698447d75d79e03fc3d77e7cf055738';
 const redirectUri = 'http://localhost:3000/callback';
 
@@ -19,27 +19,28 @@ export const requestOAuthAuthentication = (codeVerifier: string) => {
 };
   
 export const exchangeAuthorizationCode = async (code: string, codeVerifier: string) => {
-    const tokenUrl = 'https://myanimelist.net/v1/oauth2/token';
-    try {
-      const response = await axios.post(tokenUrl, {
-        client_id: clientId,
-        client_secret: clientSecret,
-        grant_type: 'authorization_code',
-        code: code,
-        redirect_uri: redirectUri,
-        code_verifier: codeVerifier,
-      });
-      console.log('Response received:', response.data); 
+  try {
+    // Constructing the x-www-form-urlencoded data
+    const data = new URLSearchParams();
+    data.append('client_id', clientId);
+    data.append('client_secret', clientSecret);
+    data.append('code', code);
+    data.append('redirect_uri', redirectUri);
+    data.append('code_verifier', codeVerifier);
 
-      return response.data; 
-    } catch (error: any) {
-        if (error.response) {
-          console.error('Error Response', error.response.data);
-        } else if (error.request) {
-          console.error('Error Request', error.request);
-        } else {
-          console.error('Error Message', error.message);
-        }
-      }
-      
-  };
+    // Send a POST request
+    const response = await axios.post('http://localhost:3002/exchangeToken', data, {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
+
+    localStorage.setItem('access_token', response.data.access_token);
+    return response.data;
+  } catch (error: any) {
+    throw error;
+  }
+};
+
+
+

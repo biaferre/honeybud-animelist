@@ -8,6 +8,12 @@ export interface CollectionProps {
     data: Anime[];
   }
   
+export interface TokenResponse {
+    token_type: string;
+    expires_in: number;
+    access_token: string;
+    refresh_token: string;
+  };
   
 
 export interface Anime {
@@ -66,8 +72,8 @@ export interface AnimeStudio {
     score: number | null;
     num_episodes_watched: number;
     is_rewatching: boolean;
-    start_date: string | null; // Assuming the date format is string
-    finish_date: string | null; // Assuming the date format is string
+    start_date: string | null;
+    finish_date: string | null;
     priority: number;
     num_times_rewatched: number;
     rewatch_value: number;

@@ -7,7 +7,7 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { LandingPage } from "./pages/landing/LandingPage";
 import { LoginPage } from "./pages/login/LoginPage";
 import { Home} from "./pages/home/Home";
-
+import { OAuthRedirectHandler } from "./services/OAuthRedirectHandler"
 
 function App() {
   return (
@@ -15,11 +15,12 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage/>} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/callback" element={<Home/>} />
+        <Route path="/callback" element={<OAuthRedirectHandler />} />
+        <Route path="/home" element={<Home />} />
+
       </Routes>
     </BrowserRouter>
   );
 }
-
 
 export default App;

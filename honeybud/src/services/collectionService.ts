@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const getSeasonalAnime = async (year: number, season: string): Promise<Anime[]> => {
   const url = `https://api.myanimelist.net/v2/anime/season/${year}/${season}`;
-  const apiKey = '41d19d7ac40dc14ab23df95f93b92134'; // Replace with your actual API key
+  const apiKey = '41d19d7ac40dc14ab23df95f93b92134'; 
 
   try {
     const response = await axios.get(url, {
